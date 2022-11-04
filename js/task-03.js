@@ -12,3 +12,14 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+const imagesArr = images.map((element) => {
+  let image = document.createElement("img");
+  image.src = element.url;
+  image.alt = element.alt;
+  return image;
+});
+
+const imagesList = document.querySelector("ul");
+imagesList.append(...imagesArr);
