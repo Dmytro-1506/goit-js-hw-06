@@ -1,20 +1,25 @@
 const categoriesArr = document.querySelectorAll(".item");
-const categoriesArrLength = categoriesArr.length;
-
-console.log(`Number of categories: ${categoriesArrLength}`);
-
-const animals = document.querySelector(".item");
-
-const title = categoriesArr[0].querySelector("h2").textContent;
-// console.log(categoriesArr[0].querySelector("h2"));
-console.log(`Category: ${title}`);
-
-
-
-// console.log(categoriesArr);
-
 
 // Number of categories: 3
+
+console.log(`Number of categories: ${categoriesArr.length}`);
+console.log("");
+
+function categoriesList(arr) {
+    let titleOfCategorie = "";
+    let numberOfitems = 0;
+
+    arr.forEach(element => {
+        titleOfCategorie = element.querySelector("h2").textContent;
+        numberOfitems = element.querySelector("ul").querySelectorAll('li').length;
+
+        console.log(`Category: ${titleOfCategorie}`);
+        console.log(`Elements: ${numberOfitems}`);
+        console.log("");
+    });
+}
+
+categoriesList(categoriesArr);
 
 // Category: Animals
 // Elements: 4
