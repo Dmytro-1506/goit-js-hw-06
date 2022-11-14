@@ -13,13 +13,21 @@ const images = [
   },
 ];
 
+const imagesList = document.querySelector("ul");
 
 const imagesArr = images.map((element) => {
-  let image = document.createElement("img");
-  image.src = element.url;
-  image.alt = element.alt;
-  return image;
+  let image = `<img src= ${element.url} alt=${element.alt}>`;
+  imagesList.insertAdjacentHTML("beforeend", image);
 });
 
-const imagesList = document.querySelector("ul");
-imagesList.append(...imagesArr);
+
+// imagesList.append(...imagesArr);
+
+// function addImage(arr) {
+//   arr.forEach(element => {
+//     let string = `${element}`;
+//     imagesList.insertAdjacentHTML("beforeend", string);
+//   });
+// };
+
+// addImage(imagesArr);
