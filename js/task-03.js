@@ -17,17 +17,7 @@ const imagesList = document.querySelector("ul");
 
 const imagesArr = images.map((element) => {
   let image = `<img src= ${element.url} alt=${element.alt}>`;
-  imagesList.insertAdjacentHTML("beforeend", image);
+  return image;
 });
 
-
-// imagesList.append(...imagesArr);
-
-// function addImage(arr) {
-//   arr.forEach(element => {
-//     let string = `${element}`;
-//     imagesList.insertAdjacentHTML("beforeend", string);
-//   });
-// };
-
-// addImage(imagesArr);
+  imagesList.insertAdjacentHTML("beforeend", imagesArr);
