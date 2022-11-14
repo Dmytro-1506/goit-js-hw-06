@@ -29,7 +29,7 @@ function createBoxes(numberOfBoxes) {
   };
   boxesArr.map((elem, index) => {
     elem.setAttribute('width', `${(30 + index * 10)}px`);
-    elem.setAttribute('hight', `${(30 + index * 10)}px`);
+    elem.setAttribute('height', `${(30 + index * 10)}px`);
   });
   boxesDiv.append(...boxesArr);
 }
